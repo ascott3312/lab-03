@@ -1,5 +1,4 @@
 'use strict';
-
 $(() => {
   $('#photo-gallery').hide();
   const ajaxSettings = { method: 'get', dataType: 'json' };
@@ -12,8 +11,8 @@ $(() => {
     })
     .then(() => { 
       renderCreature();
-      $('.spinner').fadeOut();
-      $('#photo-gallery').fadeIn();
+    //   $('.spinner').fadeOut();
+    //   $('#photo-gallery').fadeIn();
       fillKeywordDropdown();
     });
 });
@@ -25,9 +24,7 @@ function Creature(creature) {
     if(Creature.keyword.indexOf(this.keyword) < 0) {
       Creature.keyword.push(this.keyword);
     }
-
 }
-
 Creature.all = [];
 Creature.keyword = [];
 Creature.prototype.render = function () {
@@ -40,7 +37,7 @@ function renderCreature() {
   Creature.all.forEach(creature => {
     $('#photo-gallary').append(creature.render());
     });
-    $('.photo-template').remove();
+    // $('.photo-template').remove();
 }
 function fillKeywordDropdown(){
   Creature.keyword.forEach(keyword => {
