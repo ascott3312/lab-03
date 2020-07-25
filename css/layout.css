@@ -1,18 +1,6 @@
-* {
-    box-sizing: border-box;
-  }
-  body {
-    background-color: thistle;
-    width: 100%;
-  }
-  main {
-    width: 1000px;
-    background-color: honeydew;
-    margin: 0 auto;
-  }
-  img {
-    width: 300px;
-    height: 250px;
+ img {
+  width: 300px;
+  height: 250px;
   }
   section {
     margin-bottom: 10px;
@@ -20,7 +8,7 @@
     width: 33%;
     height: 325px;
     text-align: center;
-  }
+ }
   h1 {
     text-align: center;
     font-size: 2em;
@@ -48,15 +36,3 @@
   footer{
     clear: both;
   }
-  /* #filter-sort-search {
-    justify-content: start;
-    text-align: center;
-    padding-bottom: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }	
-  /* #filter-sort-search section { */
-    /* text-align: center;
-    padding-bottom: 1em;
-  } */

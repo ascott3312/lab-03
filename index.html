@@ -8,8 +8,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <script id="photo-template" type="text/x-tmpl-mustache"> 
             <section class="photo-template" data-keyword="{{keyword}}">
-                <h3>{{getTitle}}</h3>
-                <img src="{{imgURL}}" alt="{{getTitle}}" />
+                <h3 class="item">{{getTitle}}</h3>
+                <img class="item" src="{{imgURL}}" alt="{{getTitle}}" />
                 <p>{{getDescription}}</p>
             </section>
         </script>
@@ -20,14 +20,18 @@
             <select id="keyword-select">
             <option value="default">Filter by Keyword</option>
             </select>
+            <section>Page: 
+                <select id="page-filter">
+                </select> of <span id="pageCount"></span>
+            </section>
         </header>
-        <div class="spinner">
-            <i class="fa fa-spinner fa-spin"></i>Loading
-          </div>
-          <div class="spinner">
+        <!-- <div class="spinner"> -->
+            <!-- <i class="fa fa-spinner fa-spin"></i>Loading -->
+          <!-- </div> -->
+          <!-- <div class="spinner"> -->
         <main id="photo-gallary">
-        <section id="neighborhoods">
-        </section>
+        <!-- <section id="neighborhoods"> -->
+        <!-- </section> -->
         </main>
         <footer>
                 &copy; 2018 Code Fellows
