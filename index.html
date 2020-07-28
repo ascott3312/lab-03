@@ -19,12 +19,32 @@
             <h1>The Gallery of Horns</h1>
                 <select id="keyword-select">
                     <option value="default">Filter by Keyword</option>
-                </select>    
+                </select> 
+            <div id="filter-sort-search">
+            <section>Nationality: 
+                <select id="nationality-filter">
+                <option value="">All</option>
+                </select>
+            </section>
+            <section>Page: 
+                <select id="page-filter">
+                </select> of <span id="pageCount"></span>
+            </section>
+            <section id="creature">Viewing: 
+                <span id="firstShowing"></span> to <span id="lastShowing"></span>
+            </section>
+            </div>
         </header>
         <main id="photo-gallary">
+        <div class="spinner">
+            <i class="fa fa-spinner fa-spin"></i>Loading
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.1/mustache.min.js"></script>
             <script type="text/javascript" src="/js/app.js"></script>
+            <!-- <script type="text/javascript" src="/js/Person.js"></script>
+            <script type="text/javascript" src="/js/sort.js"></script>
+            <script type="text/javascript" src="/js/people.js"></script>
+            <script type="text/javascript" src="/js/filters.js"></script> -->
         </main>
         <footer>
                 &copy; 2020 DeltaV

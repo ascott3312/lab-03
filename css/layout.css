@@ -20,13 +20,7 @@
     margin: 0.25em;
     font-size: 15px;
     font-weight: bold;
-  }
-  p {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-    color: blue;
-}    
+  }  
   .description {
     text-align: center;
   }

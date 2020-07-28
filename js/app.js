@@ -22,6 +22,7 @@ $(() => {
       renderCreature();
       renderFilters();
       handleFilters();
+      Creature.numPages = Math.ceil(Creature.all.length / Creature.creaturePerPage);
       // $('.spinner').fadeOut();
       // $('#photo-gallery').fadeIn();
     });
@@ -37,6 +38,8 @@ function Creature(creature) {
 }
 Creature.all = [];
 Creature.keyword = [];
+Creature.creaturePerPage = 12;
+Creature.numPages;
 Creature.prototype.render = function () {
   const templateHTML = $('#photo-template').html();
   const renderedHTML = Mustache.render(templateHTML, this);
