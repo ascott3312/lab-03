@@ -9,10 +9,20 @@ $(() => {
         Creature.all.push(new Creature(creature));
       });
     })
+    .then(
+      $.ajax('./datafiles/page-2.json', ajaxSettings) 
+      .then((data) => {
+        const arrayOfCreatures = data;
+        arrayOfCreatures.forEach((creature) => {
+          Creature.all.push(new Creature(creature));
+        });
+      })
+    )
     .then(() => { 
       renderCreature();
       renderFilters();
       handleFilters();
+      Creature.numPages = Math.ceil(Creature.all.length / Creature.creaturePerPage);
       // $('.spinner').fadeOut();
       // $('#photo-gallery').fadeIn();
     });
@@ -28,6 +38,8 @@ function Creature(creature) {
 }
 Creature.all = [];
 Creature.keyword = [];
+Creature.creaturePerPage = 12;
+Creature.numPages;
 Creature.prototype.render = function () {
   const templateHTML = $('#photo-template').html();
   const renderedHTML = Mustache.render(templateHTML, this);
