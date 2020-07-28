@@ -9,6 +9,15 @@ $(() => {
         Creature.all.push(new Creature(creature));
       });
     })
+    .then(
+      $.ajax('./datafiles/page-2.json', ajaxSettings) 
+      .then((data) => {
+        const arrayOfCreatures = data;
+        arrayOfCreatures.forEach((creature) => {
+          Creature.all.push(new Creature(creature));
+        });
+      })
+    )
     .then(() => { 
       renderCreature();
       renderFilters();
