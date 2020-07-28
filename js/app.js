@@ -19,10 +19,10 @@ $(() => {
       })
     )
     .then(() => { 
+      Creature.numPages = Math.ceil(Creature.all.length / Creature.creaturePerPage);
       renderCreature();
       renderFilters();
       handleFilters();
-      Creature.numPages = Math.ceil(Creature.all.length / Creature.creaturePerPage);
       // $('.spinner').fadeOut();
       // $('#photo-gallery').fadeIn();
     });
