@@ -9,6 +9,7 @@ function renderFilters() {
   });
  
   // Setup page filter
+  console.log('hit')
   $('#pageCount').text(Creature.numPages);
   for (let i = 1; i <= Creature.numPages; i++) {
     const $option = $('<option>').text(i).attr('value', i);
@@ -18,7 +19,7 @@ function renderFilters() {
     showCreature($(this).val());
   });
 }
-function showPeople(page) {
+function showCreature(page) {
   $('.creature').hide();
   let startAt = Creature.creaturePerPage * (page - 1);
   let endAt = startAt + Creature.creaturePerPage > Creature.all.length ? Creature.all.length : startAt + Creature.creaturePerPage;
